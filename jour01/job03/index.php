@@ -21,38 +21,78 @@
     
     <body>
         <main>
-            <h1>VARIABLE dans un TABLEAU en PHP</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th> <?php echo $nomvar1; ?> </th>
-                        <th> <?php echo $nomvar2; ?> </th>
-                        <th> <?php echo $nomvar3; ?> </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th> <?php echo "variable de type BOOLEENNE"; ?> </th>
-                        <td> <?php echo '$bool'; ?> </td>
-                        <td> <?php echo $bool; ?> </td>
-                    </tr>
-                    <tr>
-                        <th> <?php echo "variable de type ENTIER"; ?> </th>
-                        <td> <?php echo '$age'; ?> </td>
-                        <td> <?php echo $age; ?> </td>
-                    </tr>
-                    <tr>
-                        <th> <?php echo "variable de type CARACTERE"; ?> </th>
-                        <td> <?php echo '$prenom'; ?> </td>
-                        <td> <?php echo $prenom; ?> </td>
-                    </tr>
-                    <tr>
-                        <th> <?php echo "variable de type FLOAT"; ?> </th>
-                        <td> <?php echo '$distance'; ?> </td>
-                        <td> <?php echo $distance; ?> </td>
-                    </tr>
-                </tbody>
-            </table>
+            <section>
+                <h1> TABLEAU en HTML avec du PHP inclus </h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> <?php echo $nomvar1; ?> </th>
+                            <th> <?php echo $nomvar2; ?> </th>
+                            <th> <?php echo $nomvar3; ?> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th> <?php echo "variable de type BOOLEENNE"; ?> </th>
+                            <td> <?php echo '$bool'; ?> </td>
+                            <td> <?php echo $bool; ?> </td>
+                        </tr>
+                        <tr>
+                            <th> <?php echo "variable de type ENTIER"; ?> </th>
+                            <td> <?php echo '$age'; ?> </td>
+                            <td> <?php echo $age; ?> </td>
+                        </tr>
+                        <tr>
+                            <th> <?php echo "variable de type CARACTERE"; ?> </th>
+                            <td> <?php echo '$prenom'; ?> </td>
+                            <td> <?php echo $prenom; ?> </td>
+                        </tr>
+                        <tr>
+                            <th> <?php echo "variable de type FLOAT"; ?> </th>
+                            <td> <?php echo '$distance'; ?> </td>
+                            <td> <?php echo $distance; ?> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                    <h2>TABLEAU généré en PHP</h2>
+                <?php 
+                    echo '
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>'.$nomvar1.'</th>
+                                <th>'.$nomvar2.'</th>
+                                <th>'.$nomvar3.'</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th> variable de type BOOLEENNE </th>
+                                <td> $bool </td>
+                                <td>'.$bool.'</td>
+                            </tr>
+                            <tr>
+                                <th> variable de type ENTIER </th>
+                                <td> $age </td>
+                                <td>'.$age.' </td>
+                            </tr>
+                            <tr>
+                                <th> variable de type CARACTERE </th>
+                                <td> $prenom </td>
+                                <td>'.$prenom.' </td>
+                            </tr>
+                            <tr>
+                                <th> variable de type FLOAT </th>
+                                <td> $distance </td>
+                                <td>'.$distance.' </td>
+                            </tr>
+                        </tbody>
+                    </table>';
+                    
+                ?>
+            </section>
         </main>
     </body>
 </html>
