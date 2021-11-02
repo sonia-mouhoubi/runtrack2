@@ -11,11 +11,8 @@
     <body>
         <?php
             $str = "LaPlateforme";
-        
-
-            echo $str.'<br/>'; //Celi est un commentaire en une seule ligne
-            echo $str; /* Ceci est un commentaire sur
-                         plusieurs lignes */
+            // echo $str.'<br/>';
+            /* echo $str; */
         ?>
     </body>
 </html>
