@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+table {
+    border-collapse:collapse;
+    margin: 3em auto;
+}
+table th, table td {
+    border: 2px solid black; 
+    text-align: center;
+
+}
+table th {
+    width: 30%;
+    padding: 1em;
+    background-color: darkcyan;
+    color: whitesmoke;
+}
+table td:nth-child(3) {
+    color: tomato;
+    font-weight: bolder;
+}
