@@ -1,6 +1,6 @@
 <?php
 
-    $str ='On n est pas le meilleur quand on le croit mais quand on le sait';
+    $str ='on n est pas le meilleur quand on le croit mais quand on le sait';
     $v = 0;
     $c = 0;
     $dic = [
@@ -16,7 +16,8 @@
         }
         foreach ($dic['consonnes'] as $element) {
             if ($str[$i] == $element) {
-                $c++;            } 
+                $c++;            
+            } 
         }
     }
     echo '<table>
