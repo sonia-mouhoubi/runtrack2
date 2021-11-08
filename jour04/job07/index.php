@@ -1,32 +1,89 @@
 <?php 
 
-foreach($_GET as $element) {
-    if($element %2 == 0) {
-         echo $element." est paire </br>";
-    }
-    else {
-     echo $element." est impaire </br>";
-    }
+/*foreach ($_GET as $key => $value) {
+    for($i=0; $i <= $_GET["largeur"]; $i++) {
+        echo "_ ";
 
-    var_dump ($_GET);
+    }
+    for($i=0; $i <= $_GET["hauteur"]; $i++) {
+        echo "|<br>";
+
+    }
+} */
+
+
+for ($i = 0; $i < $_GET["hauteur"]; $i++) { // Récupérer avec $_GET pour le toit
+    for($toit=$_GET["hauteur"];$toit>=$i;$toit--) {
+        if($toit!=$_GET["hauteur"]-1) {
+            echo "&nbsp&nbsp";
+
+        }
+     
+        }
+    echo "/"; 
+   
+    for($toit=1;$toit<=$i;$toit++) {
+        echo "__";
+     
+        }
+     
+    echo "\ "; 
+    echo "<br>";
+ 
 }
+
+for($i = 1; $i < $_GET["largeur"]; $i++) { // Récupérer avec $_GET la largeur et l'incrémenter 
+       
+  
+
+}
+for ($i = 0; $i < $_GET["hauteur"]; $i++) { // Récupérer avec $_GET la hauteur et l'incrémenter
+
+    for($j = 0; $j < $_GET["largeur"]; $j++) {
+        if($j==0) {
+            echo '&nbsp&nbsp|';
+
+
+        }
+        elseif ($j==$_GET["largeur"]-1) {
+            
+            if($i!=$_GET["hauteur"]) {
+                
+                   
+                echo '|<br>';
+            }
+           
+       
+            
+        }
+        else {
+            if ($i==$_GET["hauteur"]-1) {
+                echo '_';
+            }
+            else {
+                echo "&nbsp&nbsp";
+
+            }
+
+
+        }
+    }
+   
+}
+
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Formulaire." />
-        <title>FORMULAIRE</title>
-    </head>
-    <body>
-        <main> 
-            <form action="" method="get">
-                    <input type="text" name="largeur">
-                    <input type="text" name="hauteur">
+    <form action="" method="get">
+        <br>
+        <input type="text" name="largeur" placeholder="Largeur">
 
-                    <button type="submit"></button>
-            </form>  
-        </main>
-    </body>
+        <input type="text" name="hauteur" placeholder="Hauteur">
+
+        <button type="submit">Valider</button>
+    </form>
 </html>
+
