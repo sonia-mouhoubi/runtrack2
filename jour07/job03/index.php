@@ -4,21 +4,14 @@
         unset($_SESSION['surname']);//Je DETRUIT ma session
     }
 
-    /* $_SESSION['surname']=0;   
-    
-      if($_SESSION['surname']=$_GET['prenom']) {
-            if(isset($_GET['valider'])); {
-                echo $_SESSION['surname'];
+    if(!isset($_SESSION['surname'])) { //Si ma session n'existe pas
+        $_SESSION['surname']=''; // Je la créer
+    }
 
-            }*/
-        if(!isset($_SESSION['surname'])) { //Si ma session n'existe pas
-            $_SESSION['surname']=''; // Je la créer et 
-        }
-   
-       if(isset($_GET['prenom'])) { //
-           $_SESSION['surname'].=$_GET['prenom'].'<br>';
-       }
-       echo $_SESSION['surname'];
+    if(isset($_GET['prenom'])) { //Si ma prenom existe
+        $_SESSION['surname'].=$_GET['prenom'].'<br>'; // Je dis que ma session est égale à mon GET PRENOM  
+    }
+    echo $_SESSION['surname']; // et je l'affiche
 ?>
 
 <!DOCTYPE html>
