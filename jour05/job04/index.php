@@ -1,6 +1,6 @@
 <?php
 
-   function calcule($a, $operation, $b){
+   function leetspeak($a, $operation, $b){
        if($operation == '+') {
         return $operation = $a+$b;
        }
@@ -15,7 +15,7 @@
        }
    }
   
-   echo calcule(7, '/', 10);
+   echo leetspeak(7, '*', 10);
 
 
 ?>
