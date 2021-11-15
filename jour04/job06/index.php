@@ -1,7 +1,7 @@
 <?php 
 
 foreach($_GET as $element) {
-    if($element %2 == 0) {
+    if($element % 2== 0) {
          echo $element." est paire </br>";
     }
     else {

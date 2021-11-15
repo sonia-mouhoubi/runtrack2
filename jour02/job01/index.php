@@ -10,17 +10,30 @@
     
     <body>
         <?php
-           $i =0;
+           /*$i =0;
            while ($i <= 1337) {
-                echo $i;
-                echo "</br>";
-                $i++;
-                
+            $i++;
+
                 if ($i == 42) {
-                    echo "<b>".$i."</b>";
-                    echo "<u>".$i."</u>";
+                    echo "<u><b>".$i."</b></u>";
+                    echo "</br>";
                 }
-           }  
+                else {
+                    echo $i;
+                    echo "</br>";
+
+                }
+           }  */
+           $i=0;
+           for($i=0; $i<=1337; $i++) {
+               if ($i==42) {
+                echo "<u><b>".$i."</b></u></br>";
+               }
+               else {
+                echo $i.'</br>';
+               }
+
+           }
         ?>
     </body>
 </html>

@@ -4,7 +4,7 @@
     foreach ($_GET as $key => $value) {
         $i++;
     }
-    echo  $i;
+    echo $i;
     var_dump ($_GET);
 ?>
 <!DOCTYPE html>
@@ -14,13 +14,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Formulaire." />
         <title>FORMULAIRE</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Festive&family=Scheherazade+New&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Festive&family=Scheherazade+New&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/agenda.css">
     </head>
     <body>
         <header>

@@ -1,22 +1,3 @@
-<?php
-
-    foreach ($_GET as $key => $value) {
-        echo '<table>
-        <thead>
-            <tr>
-                <th> Arguments </th>
-                <th> Valeurs </th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <td>'.$key.'</td>
-            <td>'.$value.'</td>
-        </tbody>
-    </table>';    }
-    
-    var_dump ($_GET);
-?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -24,19 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Formulaire." />
         <title>FORMULAIRE</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Festive&family=Scheherazade+New&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Festive&family=Scheherazade+New&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/agenda.css">
     </head>
     <body>
-        <header>
-            <h1>FORMULAIRE</h1>
-        </header>
         <main> 
+            <table>
+                <thead>
+                    <tr>
+                        <th> Arguments </th>
+                        <th> Valeurs </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php 
+                        foreach ($_GET as $key => $value) {
+                            echo '
+                                <tr>
+                                    <td>'. $key.'</td>
+                                    <td>'.$value.'</td>
+                                </tr>';
+                            } 
+                    ?>  
+                </tbody>
+            </table>
             <form action="" method="get">
                 <legend>Créer un nouvel événement</legend>
                 <fieldset>
@@ -59,6 +50,7 @@
                         <input type="time" id="time" name="time">
                     </div>
                 </fieldset>
+
                 <fieldset>
                     <div class="titre">
                         <label for="name">Titre</label> 

@@ -11,7 +11,7 @@
         return  $compteur;
    }
        
-    echo occurences('Bonjour, hello, salut','s');
+    echo occurences('Bonjour, hello, salut','l');
 
 
 
