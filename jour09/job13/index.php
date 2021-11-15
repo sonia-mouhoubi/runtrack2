@@ -2,7 +2,7 @@
 // SE CONNECTER A LA BASE DE DONNEE
 $bdd = mysqli_connect("localhost", "root", "", "jour08");
 //Faire une requete
-$requete = mysqli_query($bdd, "SELECT salles.nom, etage.nom FROM `salles` INNER JOIN `etage`");
+$requete = mysqli_query($bdd, "SELECT salles.nom AS nom_salle, etage.nom AS nom_etage FROM `salles` INNER JOIN `etage` ON salles.id_etage = etage.id");
 //Recuperer le resultat 
 $resultat = mysqli_fetch_all($requete, MYSQLI_ASSOC);
 ?>
