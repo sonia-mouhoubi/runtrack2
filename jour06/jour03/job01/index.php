@@ -8,7 +8,7 @@
             echo $element." est paire </br>";
        }
        else {
-        echo $element." est impaire </br>"; //...sinon il est impaire
+        echo $element." est impaire </br>"; //...sinon il est impaire 
        }
     }
 //var_dump($tableau);
